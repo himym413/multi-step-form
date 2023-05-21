@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/dist/assets/fonts/Ubuntu-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Ubuntu-Medium";
+  src: url("/dist/assets/fonts/Ubuntu-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url("/dist/assets/fonts/Ubuntu-Bold.ttf") format("truetype"); }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Ubuntu";
+  font-size: 16px; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style: none; }
+
+button {
+  display: inline-block;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.flex {
+  display: flex; }
+
+.flex-col {
+  flex-direction: column; }
+
+.errorMessage {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  color: #ed3548;
+  font-family: "Ubuntu-Bold"; }
+
+.step__active {
+  color: #02295a !important; }
+  .step__active::before {
+    background-color: #bfe2fd !important;
+    border: none !important; }
+
+.option__active {
+  border-color: #473dff !important;
+  background-color: #f0f6ff; }
+
+.switch__active {
+  color: #02295a !important;
+  transition: color 0.3s ease-in; }
+
+.addon__active {
+  background-color: #f0f6ff;
+  border-color: #473dff !important; }
+
+.addon__active svg {
+  background-color: #473dff;
+  border: none !important; }
+
+.line__separator {
+  height: 1px;
+  width: 100%;
+  background-color: #d6d9e6; }
+
+.switch__container {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f0f6ff;
+  padding: 0.5rem 0;
+  border-radius: 8px; }
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px; }
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #02295a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px); }
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px; }
+
+.slider.round:before {
+  border-radius: 50%; }
+
+.hidden {
+  display: none; }

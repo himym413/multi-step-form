@@ -1,0 +1,502 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/dist/assets/fonts/Ubuntu-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Ubuntu-Medium";
+  src: url("/dist/assets/fonts/Ubuntu-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url("/dist/assets/fonts/Ubuntu-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/dist/assets/fonts/Ubuntu-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Ubuntu-Medium";
+  src: url("/dist/assets/fonts/Ubuntu-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url("/dist/assets/fonts/Ubuntu-Bold.ttf") format("truetype"); }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Ubuntu";
+  font-size: 16px; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style: none; }
+
+button {
+  display: inline-block;
+  border: none;
+  background: none;
+  cursor: pointer; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.flex {
+  display: flex; }
+
+.flex-col {
+  flex-direction: column; }
+
+.errorMessage {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  color: #ed3548;
+  font-family: "Ubuntu-Bold"; }
+
+.step__active {
+  color: #02295a !important; }
+  .step__active::before {
+    background-color: #bfe2fd !important;
+    border: none !important; }
+
+.option__active {
+  border-color: #473dff !important;
+  background-color: #f0f6ff; }
+
+.switch__active {
+  color: #02295a !important;
+  transition: color 0.3s ease-in; }
+
+.addon__active {
+  background-color: #f0f6ff;
+  border-color: #473dff !important; }
+
+.addon__active svg {
+  background-color: #473dff;
+  border: none !important; }
+
+.line__separator {
+  height: 1px;
+  width: 100%;
+  background-color: #d6d9e6; }
+
+.switch__container {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f0f6ff;
+  padding: 0.5rem 0;
+  border-radius: 8px; }
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px; }
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #02295a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px); }
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px; }
+
+.slider.round:before {
+  border-radius: 50%; }
+
+.hidden {
+  display: none; }
+
+body {
+  background-color: #f0f6ff; }
+
+header {
+  position: relative; }
+  header .header__image {
+    display: block;
+    margin: 0 auto; }
+  header .header__steps {
+    gap: 2.5em;
+    position: absolute;
+    top: 2.5em;
+    left: 50%;
+    transform: translateX(-50%); }
+    header .header__steps__step {
+      color: white;
+      position: relative; }
+      header .header__steps__step::before {
+        content: "";
+        position: absolute;
+        top: -0.3em;
+        left: -0.7em;
+        width: 2em;
+        height: 2em;
+        background-color: none;
+        border: 1px solid white;
+        border-radius: 50%;
+        z-index: -1; }
+      header .header__steps__step__title, header .header__steps__step__about {
+        display: none; }
+
+.main {
+  max-width: 375px;
+  margin: 0 auto; }
+  .main__modal {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 1.5em;
+    background-color: white;
+    border-radius: 0.75em;
+    transform: translateY(-4.6em);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5); }
+    .main__modal__header {
+      color: #02295a;
+      font-family: "Ubuntu-Medium";
+      font-size: 1.5em;
+      margin-bottom: 0.5em; }
+    .main__modal__about {
+      color: #9699ab;
+      line-height: 1.5;
+      margin-bottom: 1.5em; }
+    .main__modal__one {
+      margin-bottom: 1.5rem; }
+      .main__modal__one__form__container {
+        align-items: center;
+        justify-content: space-between; }
+    .main__modal form label {
+      display: block;
+      color: #02295a;
+      font-size: 0.8em;
+      margin-bottom: 0.5em; }
+    .main__modal form input {
+      font-family: "Ubuntu";
+      color: #02295a;
+      width: 100%;
+      height: 2.5em;
+      font-size: 0.9em;
+      padding: 0.5em 1em;
+      margin-bottom: 1.5em; }
+      .main__modal form input::placeholder {
+        color: #9699ab; }
+      .main__modal form input:hover, .main__modal form input:focus {
+        cursor: pointer; }
+    .main__modal__two {
+      margin-bottom: -3.5rem; }
+      .main__modal__two__errorMessage {
+        text-align: center; }
+    .main__modal__two__container {
+      gap: 0.5rem;
+      margin-bottom: 1rem; }
+    .main__modal__two__option {
+      border: 1px solid #9699ab;
+      border-radius: 8px;
+      padding: 0.8rem;
+      gap: 0.5rem;
+      align-items: flex-start; }
+      .main__modal__two__option:hover, .main__modal__two__option:focus {
+        cursor: pointer;
+        border-color: #473dff; }
+      .main__modal__two__option__header {
+        font-size: 0.9rem;
+        color: #02295a;
+        margin-bottom: 0.25rem; }
+      .main__modal__two__option__price {
+        font-size: 0.8rem;
+        color: #9699ab; }
+      .main__modal__two__option__bonus {
+        font-size: 0.7rem;
+        color: #02295a; }
+      .main__modal__two__option__billing {
+        font-size: 0.9rem;
+        color: #9699ab; }
+    .main__modal__three {
+      margin-bottom: -1.5rem; }
+    .main__modal__three__addon {
+      align-items: center;
+      padding: 1rem;
+      border: 1px solid #d6d9e6;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      justify-content: space-between; }
+      .main__modal__three__addon:hover, .main__modal__three__addon:focus {
+        cursor: pointer;
+        border-color: #473dff; }
+      .main__modal__three__addon__header {
+        font-size: 1.05rem;
+        color: #02295a;
+        margin-bottom: 0.25rem; }
+      .main__modal__three__addon__about {
+        font-size: 0.8rem;
+        color: #9699ab; }
+      .main__modal__three__addon div {
+        margin: 0 auto 0 1rem; }
+      .main__modal__three__addon__price {
+        font-size: 0.8rem;
+        color: #02295a; }
+    .main__modal__four {
+      margin-bottom: 4rem; }
+      .main__modal__four__container {
+        background-color: #f0f6ff;
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1rem; }
+      .main__modal__four__top {
+        align-items: center;
+        justify-content: space-between; }
+        .main__modal__four__top__header {
+          font-size: 1rem;
+          color: #02295a;
+          margin-bottom: 0.25rem; }
+        .main__modal__four__top__changeBtn {
+          text-decoration: underline;
+          font-size: 1rem;
+          color: #9699ab; }
+          .main__modal__four__top__changeBtn:hover, .main__modal__four__top__changeBtn:focus {
+            cursor: pointer;
+            color: #473dff; }
+        .main__modal__four__top__price {
+          color: #02295a;
+          font-family: "Ubuntu-Bold"; }
+      .main__modal__four__bottom {
+        gap: 1rem; }
+        .main__modal__four__bottom div {
+          align-items: center;
+          justify-content: space-between; }
+        .main__modal__four__bottom__header {
+          color: #9699ab;
+          font-size: 1rem; }
+        .main__modal__four__bottom__price {
+          color: #02295a;
+          font-size: 1rem; }
+      .main__modal__four__total {
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 1rem; }
+        .main__modal__four__total__header {
+          color: #9699ab;
+          font-size: 1rem; }
+        .main__modal__four__total__price {
+          color: #473dff;
+          font-family: "Ubuntu-Bold"; }
+    .main__modal__five {
+      align-items: center;
+      padding: 4rem 2rem;
+      margin-bottom: 7rem; }
+      .main__modal__five__img {
+        width: 60px;
+        margin-bottom: 2rem; }
+      .main__modal__five__about {
+        text-align: center;
+        font-size: 0.9rem; }
+  .main__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em 1em;
+    background-color: white; }
+    .main__buttons__previous {
+      color: #9699ab;
+      font-family: "Ubuntu-Medium"; }
+      .main__buttons__previous:hover, .main__buttons__previous:focus {
+        color: #473dff; }
+    .main__buttons__highlighted {
+      margin-left: auto;
+      color: white;
+      background-color: #02295a;
+      padding: 0.75em 1em;
+      border-radius: 0.25em;
+      font-family: "Ubuntu-Medium"; }
+      .main__buttons__highlighted:hover, .main__buttons__highlighted:focus {
+        background-color: #473dff; }
+    .main__buttons__confirm:hover, .main__buttons__confirm:focus {
+      opacity: 0.7; }
+
+footer {
+  font-size: 0.75em;
+  text-align: center; }
+
+@media (min-width: 900px) {
+  body {
+    background-color: white;
+    height: 100vh; }
+  .container {
+    display: flex;
+    gap: 8rem;
+    height: 98%;
+    padding: 2rem 0; }
+  header {
+    width: 30%; }
+    header .header__image {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px; }
+    header .header__steps {
+      flex-direction: column;
+      gap: 3.5rem;
+      top: 4rem;
+      left: 40%; }
+      header .header__steps__step {
+        font-size: 1.35rem;
+        display: flex;
+        gap: 2rem; }
+        header .header__steps__step div {
+          margin-top: -0.5rem; }
+        header .header__steps__step__title {
+          display: block;
+          color: #adbeff;
+          font-weight: "Ubuntu";
+          font-size: 1rem; }
+        header .header__steps__step__about {
+          display: block;
+          color: white;
+          font-weight: "Ubuntu-Bold";
+          font-size: 1.35rem; }
+  .main {
+    max-width: none;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin: 0 auto; }
+    .main__modal {
+      box-shadow: none;
+      width: 100%;
+      transform: translateY(0);
+      padding: 0;
+      margin: auto 0; }
+      .main__modal .errorMessage {
+        font-size: 1.25rem; }
+      .main__modal__header {
+        font-size: 2.5rem; }
+      .main__modal__about {
+        font-size: 1.25rem; }
+      .main__modal__one__form__container {
+        width: 70%; }
+      .main__modal form label {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem; }
+      .main__modal form input {
+        font-size: 1.25rem;
+        font-weight: 600;
+        width: 70%;
+        height: 3em;
+        padding: 0.5em 1em;
+        margin-bottom: 2em;
+        border: none;
+        border: 1px solid #d6d9e6;
+        border-radius: 10px; }
+      .main__modal__two__errorMessage {
+        width: 70%; }
+      .main__modal__two__container {
+        width: 70%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem; }
+      .main__modal__two__option {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1.5rem;
+        gap: 4rem;
+        width: 100%; }
+        .main__modal__two__option__header {
+          font-size: 1.2rem; }
+        .main__modal__two__option__price {
+          font-size: 1.1rem;
+          margin-bottom: 0.5rem; }
+        .main__modal__two__option__bonus {
+          font-size: 1rem; }
+      .main__modal__three__container {
+        width: 70%; }
+      .main__modal__three__addon {
+        padding: 1.5rem 2rem;
+        margin-bottom: 1.5rem; }
+        .main__modal__three__addon__header {
+          font-size: 1.5rem; }
+        .main__modal__three__addon__about {
+          font-size: 1.2rem; }
+        .main__modal__three__addon__price {
+          font-size: 1.2rem; }
+      .main__modal__four {
+        width: 70%; }
+        .main__modal__four__container {
+          padding: 2rem;
+          gap: 1.5rem;
+          margin-bottom: 2rem; }
+        .main__modal__four__top__header, .main__modal__four__top__changeBtn, .main__modal__four__top__price {
+          font-size: 1.5rem; }
+        .main__modal__four__top__header {
+          margin-bottom: 0.5rem; }
+        .main__modal__four__bottom {
+          gap: 1.5rem; }
+          .main__modal__four__bottom__header, .main__modal__four__bottom__price {
+            font-size: 1.5rem; }
+        .main__modal__four__total {
+          margin: 0 2rem; }
+          .main__modal__four__total__header, .main__modal__four__total__price {
+            font-size: 1.5rem; }
+      .main__modal__five {
+        width: 70%; }
+        .main__modal__five__img {
+          width: 100px; }
+        .main__modal__five .main__modal__header {
+          font-size: 3rem; }
+        .main__modal__five__about {
+          font-size: 1.4rem; }
+    .main__buttons {
+      width: 70%; }
+      .main__buttons__previous {
+        font-size: 1.25rem; }
+      .main__buttons__highlighted {
+        font-size: 1.25rem; }
+  .switch__container {
+    width: 70%;
+    padding: 1rem;
+    margin-top: 2rem; } }

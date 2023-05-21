@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script defer src="/dist/js/responsive.js"></script>
+    <script defer src="/dist/js/main.js"></script>
+
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img
+          class="header__image"
+          src="assets/images/bg-sidebar-mobile.svg"
+          alt="Header Background Image"
+        />
+        <ul class="header__steps flex">
+          <li class="header__steps__step step__active flex">
+            <span class="header__steps__step__number">1</span>
+            <div class="flex flex-col">
+              <span class="header__steps__step__title uppercase">Step 1</span>
+              <span class="header__steps__step__about uppercase"
+                >Your info</span
+              >
+            </div>
+          </li>
+          <li class="header__steps__step flex">
+            <span class="header__steps__step__number">2</span>
+            <div class="flex flex-col">
+              <span class="header__steps__step__title uppercase">Step 2</span>
+              <span class="header__steps__step__about uppercase"
+                >Select plan</span
+              >
+            </div>
+          </li>
+          <li class="header__steps__step flex">
+            <span class="header__steps__step__number">3</span>
+            <div class="flex flex-col">
+              <span class="header__steps__step__title uppercase">Step 3</span>
+              <span class="header__steps__step__about uppercase">Add-ons</span>
+            </div>
+          </li>
+          <li class="header__steps__step flex">
+            <span class="header__steps__step__number">4</span>
+            <div class="flex flex-col">
+              <span class="header__steps__step__title uppercase">Step 4</span>
+              <span class="header__steps__step__about uppercase">Summary</span>
+            </div>
+          </li>
+        </ul>
+      </header>
+
+      <main class="main">
+        <!-- Step 1 -->
+        <div class="main__modal main__modal__one">
+          <h1 class="main__modal__header">Personal info</h1>
+          <p class="main__modal__about">
+            Please provide your name, email address, and phone number.
+          </p>
+
+          <form class="main__modal__one__form">
+            <div class="main__modal__one__form__part">
+              <div class="flex main__modal__one__form__container">
+                <label class="capitalize">Name</label>
+                <span class="errorMessage"></span>
+              </div>
+              <input
+                class="main__modal__one__input input__name"
+                type="text"
+                placeholder="e.g. Stephen King"
+                required
+              />
+            </div>
+            <div class="main__modal__one__form__part">
+              <div class="flex main__modal__one__form__container">
+                <label class="capitalize">Email Address</label>
+                <span class="errorMessage"></span>
+              </div>
+              <input
+                class="main__modal__one__input input__email"
+                type="email"
+                placeholder="e.g. stephenking@lorem.com"
+                required
+              />
+            </div>
+            <div class="main__modal__one__form__part">
+              <div class="flex main__modal__one__form__container">
+                <label class="capitalize">Phone Number</label>
+                <span class="errorMessage"></span>
+              </div>
+              <input
+                class="main__modal__one__input input__phone"
+                type="tel"
+                placeholder="e.g. +1 234 567 890"
+                required
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="main__modal main__modal__two hidden">
+          <h1 class="main__modal__header">Select your plan</h1>
+          <p class="main__modal__about">
+            You have the option of monthly or yearly billing.
+          </p>
+          <p class="errorMessage main__modal__two__errorMessage hidden"></p>
+
+          <div class="flex flex-col main__modal__two__container">
+            <div class="main__modal__two__option flex">
+              <img src="/dist/assets/images/icon-arcade.svg" alt="" />
+              <div>
+                <h2 class="main__modal__two__option__header">Arcade</h2>
+                <p class="main__modal__two__option__price">$9/mo</p>
+                <span class="main__modal__two__option__bonus hidden">
+                  2 months free
+                </span>
+              </div>
+            </div>
+
+            <div class="main__modal__two__option flex">
+              <img src="/dist/assets/images/icon-advanced.svg" alt="" />
+              <div>
+                <h2 class="main__modal__two__option__header">Advanced</h2>
+                <p class="main__modal__two__option__price">$12/mo</p>
+                <span class="main__modal__two__option__bonus hidden">
+                  2 months free
+                </span>
+              </div>
+            </div>
+
+            <div class="main__modal__two__option flex">
+              <img src="/dist/assets/images/icon-pro.svg" alt="" />
+              <div>
+                <h2 class="main__modal__two__option__header">Pro</h2>
+                <p class="main__modal__two__option__price">$15/mo</p>
+                <span class="main__modal__two__option__bonus hidden">
+                  2 months free
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="switch__container flex">
+            <p
+              class="main__modal__two__option__billing main__modal__two__monthly switch__active"
+            >
+              Monthly
+            </p>
+            <label class="switch">
+              <input class="checkbox" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <p
+              class="main__modal__two__option__billing main__modal__two__yearly"
+            >
+              Yearly
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="main__modal main__modal__three hidden">
+          <h1 class="main__modal__header">Pick add-ons</h1>
+          <p class="main__modal__about">
+            Add-ons help enhance your gaming experience.
+          </p>
+
+          <div class="main__modal__three__container flex-col">
+            <div class="main__modal__three__addon flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="-2 0 16 10"
+                style="border: 1px solid hsl(229, 24%, 87%); border-radius: 4px"
+              >
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="m1 4 3.433 3.433L10.866 1"
+                />
+              </svg>
+              <div>
+                <h2 class="main__modal__three__addon__header">
+                  Online service
+                </h2>
+                <p class="main__modal__three__addon__about">
+                  Acces to multiplayer games
+                </p>
+              </div>
+              <p class="main__modal__three__addon__price">+$1/mo</p>
+            </div>
+            <div class="main__modal__three__addon flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="-2 0 16 10"
+                style="border: 1px solid hsl(229, 24%, 87%); border-radius: 4px"
+              >
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="m1 4 3.433 3.433L10.866 1"
+                />
+              </svg>
+              <div>
+                <h2 class="main__modal__three__addon__header">
+                  Larger storage
+                </h2>
+                <p class="main__modal__three__addon__about">
+                  Extra 1TB of cloud save
+                </p>
+              </div>
+              <p class="main__modal__three__addon__price">+$2/mo</p>
+            </div>
+            <div class="main__modal__three__addon flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="-2 0 16 10"
+                style="border: 1px solid hsl(229, 24%, 87%); border-radius: 4px"
+              >
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="m1 4 3.433 3.433L10.866 1"
+                />
+              </svg>
+              <div>
+                <h2 class="main__modal__three__addon__header">
+                  Customizable profile
+                </h2>
+                <p class="main__modal__three__addon__about">
+                  Custom theme on your profile
+                </p>
+              </div>
+              <p class="main__modal__three__addon__price">+$2/mo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__modal main__modal__four hidden">
+          <h1 class="main__modal__header">Finishing up</h1>
+          <p class="main__modal__about">
+            Double-check everything looks OK before confirming.
+          </p>
+
+          <div class="main__modal__four__container flex flex-col">
+            <div class="main__modal__four__top flex">
+              <div>
+                <h2 class="main__modal__four__top__header">Arcade (Monthly)</h2>
+                <p class="main__modal__four__top__changeBtn">Change</p>
+              </div>
+              <p class="main__modal__four__top__price">$9/mo</p>
+            </div>
+            <!-- <div class="line__separator"></div> -->
+            <div class="main__modal__four__bottom flex flex-col">
+              <!-- <div class="flex">
+                <h2 class="main__modal__four__bottom__header">
+                  Online service
+                </h2>
+                <p class="main__modal__four__bottom__price">+$1/mo</p>
+              </div>
+              <div class="flex">
+                <h2 class="main__modal__four__bottom__header">
+                  Larger storage
+                </h2>
+                <p class="main__modal__four__bottom__price">+$2/mo</p>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="main__modal__four__total flex">
+            <h2 class="main__modal__four__total__header">Total (per month)</h2>
+            <p class="main__modal__four__total__price">+$12/mo</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="main__modal main__modal__five flex flex-col hidden">
+          <img
+            class="main__modal__five__img"
+            src="/dist/assets/images/icon-thank-you.svg"
+            alt="Thank you icon"
+          />
+          <h1 class="main__modal__header">Thank you!</h1>
+          <p class="main__modal__about main__modal__five__about">
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at support@loremgaming.com
+          </p>
+        </div>
+
+        <div class="main__buttons">
+          <button class="main__buttons__previous capitalize hidden">
+            Go Back
+          </button>
+          <button
+            class="main__buttons__highlighted main__buttons__next capitalize"
+          >
+            Next Step
+          </button>
+          <button
+            class="main__buttons__highlighted main__buttons__confirm capitalize hidden"
+          >
+            Confirm
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/himym413">Igor Šešlak</a>.
+    </footer>
+  </body>
+</html>
+<!-- DON'T FORGET TO CREATE A BETTER FORM VALIDATION -->
