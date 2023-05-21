@@ -1,5 +1,5 @@
 "use strict";
-window.addEventListener("DOMContentLoaded", () => {
+
 const steps = document.querySelectorAll(".main__modal");
 const stepNumbers = document.querySelectorAll(".header__steps__step");
 const btnsContainer = document.querySelector(".main__buttons");
@@ -380,4 +380,4 @@ addons.forEach((addon) => addon.addEventListener("click", selectAddons));
 slider.addEventListener("click", toggleBillingOptions);
 slider.addEventListener("click", toggleBillingAddons);
 changeBtn.addEventListener("click", changeSelections);
-});
+
