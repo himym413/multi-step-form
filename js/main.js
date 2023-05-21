@@ -169,7 +169,7 @@ const validateForm = () => {
       errorMessage.classList.add("hidden");
     }, 3000);
   }
-
+alert(1);
   return stop;
 };
 
