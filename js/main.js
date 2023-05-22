@@ -1,5 +1,5 @@
 "use strict";
-alert("finally");
+
 const steps = document.querySelectorAll(".main__modal");
 const stepNumbers = document.querySelectorAll(".header__steps__step");
 const btnsContainer = document.querySelector(".main__buttons");
@@ -83,7 +83,6 @@ let step = 0;
 // Clicking on next button
 const nextStep = () => {
   if (step === 0) {
-    alert(1);
     let stop = validateForm();
     if (stop) return;
   }
