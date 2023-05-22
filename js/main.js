@@ -1,5 +1,5 @@
 "use strict";
-alert(1);
+
 const steps = document.querySelectorAll(".main__modal");
 const stepNumbers = document.querySelectorAll(".header__steps__step");
 const btnsContainer = document.querySelector(".main__buttons");
@@ -169,7 +169,6 @@ const validateForm = () => {
       errorMessage.classList.add("hidden");
     }, 3000);
   }
-alert(1);
   return stop;
 };
 
