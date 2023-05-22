@@ -83,6 +83,7 @@ let step = 0;
 // Clicking on next button
 const nextStep = () => {
   if (step === 0) {
+    alert(1);
     let stop = validateForm();
     if (stop) return;
   }
