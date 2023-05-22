@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/himym413/multi-step-form)
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://multi-step-form-gilt-iota.vercel.app/)
 
 ## My process
 
@@ -59,4 +59,4 @@ Definitely want to keep focusing on working on responsive design.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/himym413)
+- Frontend Mentor - [@himym413](https://www.frontendmentor.io/profile/himym413)
