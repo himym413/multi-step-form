@@ -368,8 +368,10 @@ footer {
   .container {
     display: flex;
     gap: 8rem;
+    max-width: 1200px;
     height: 98%;
-    padding: 2rem 0; }
+    padding: 2rem 0;
+    margin: 0 auto; }
   header {
     width: 30%; }
     header .header__image {
